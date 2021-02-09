@@ -70,6 +70,12 @@
         <surefire.version>2.22.0</surefire.version>
         <kotlin.version>1.4.21</kotlin.version>
         <assertj-core.version>3.16.1</assertj-core.version>
+        <sonar.projectKey>gii-is-AISS_${artifactId}</sonar.projectKey>
+        <sonar.organization>gii-is-aiss</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.language>java</sonar.language>
+        <jacoco.version>0.8.3</jacoco.version>
     </properties>
     <scm>
         <url>http://github.com/rest-assured/rest-assured/tree/${scm.branch}</url>
@@ -254,6 +260,27 @@
             <plugin>
                 <groupId>org.basepom.maven</groupId>
                 <artifactId>duplicate-finder-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.3</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                        <phase>test-compile</phase>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
