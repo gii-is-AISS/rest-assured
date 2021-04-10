@@ -70,9 +70,9 @@
         <surefire.version>2.22.0</surefire.version>
         <kotlin.version>1.4.21</kotlin.version>
         <assertj-core.version>3.16.1</assertj-core.version>
-        <sonar.projectKey>gii-is-AISS_${artifactId}</sonar.projectKey>
-        <sonar.organization>gii-is-aiss</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.projectKey>javpermar4_rest-assured</sonar.projectKey>
+  		  <sonar.organization>javpermar4</sonar.organization>
+  		  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.language>java</sonar.language>
         <jacoco.version>0.8.3</jacoco.version>
